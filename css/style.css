@@ -695,3 +695,149 @@ section p {
     }
 
 }
+/* ==========================================
+   SERVICES PAGE
+========================================== */
+
+
+/* ==========================================
+   SERVICES INTRODUCTION
+========================================== */
+
+.services-introduction {
+    background: white;
+}
+
+.services-introduction h2 {
+    max-width: 850px;
+}
+
+.services-introduction p:not(.section-label) {
+    max-width: 850px;
+    color: #555;
+    font-size: 18px;
+}
+
+
+/* ==========================================
+   SERVICE DETAIL SECTIONS
+========================================== */
+
+.service-detail {
+    background: white;
+}
+
+.service-detail-light {
+    background: #f3f4f6;
+}
+
+
+.service-detail-grid {
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+
+    gap: 40px;
+
+    align-items: start;
+}
+
+
+.service-detail-number {
+    font-size: 42px;
+
+    font-weight: 800;
+
+    color: #f59e0b;
+
+    line-height: 1;
+}
+
+
+.service-detail h2 {
+    max-width: 850px;
+
+    margin-bottom: 18px;
+}
+
+
+.service-detail p:not(.section-label) {
+    max-width: 850px;
+
+    color: #555;
+
+    font-size: 17px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ==========================================
+   SERVICE LIST
+========================================== */
+
+.service-list {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    max-width: 700px;
+}
+
+
+.service-list li {
+    position: relative;
+
+    padding: 12px 0 12px 30px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    color: #444;
+}
+
+
+.service-list li::before {
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 12px;
+
+    font-weight: bold;
+
+    color: #d97706;
+}
+
+
+/* ==========================================
+   SERVICES MOBILE DESIGN
+========================================== */
+
+@media (max-width: 600px) {
+
+    .service-detail-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .service-detail-number {
+        font-size: 34px;
+    }
+
+
+    .service-detail h2 {
+        font-size: 30px;
+    }
+
+
+    .service-detail p:not(.section-label) {
+        font-size: 16px;
+    }
+
+}
