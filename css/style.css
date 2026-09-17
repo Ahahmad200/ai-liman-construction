@@ -1550,3 +1550,187 @@ section p {
     }
 
 }
+/* ==========================================
+   CONTACT PAGE
+========================================== */
+
+.contact-section {
+    padding: 70px 0 80px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+
+/* CONTACT INFORMATION */
+
+.contact-information h2 {
+    margin-bottom: 18px;
+}
+
+.contact-information > p:not(.section-label) {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+
+/* CONTACT ITEMS */
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f3f4f6;
+
+    border-radius: 10px;
+
+    font-size: 21px;
+
+    flex-shrink: 0;
+}
+
+.contact-item h3 {
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
+.contact-item p {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   CONTACT FORM
+========================================== */
+
+.contact-form-container {
+    background: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form-container h2 {
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: 600;
+
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #dcdcdc;
+
+    border-radius: 7px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    background: #ffffff;
+
+    outline: none;
+
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #111827;
+
+    box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.08);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+
+/* CONTACT BUTTON */
+
+.contact-form-container .btn {
+    border: none;
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   MOBILE CONTACT PAGE
+========================================== */
+
+@media (max-width: 800px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-form-container {
+        padding: 25px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-section {
+        padding: 50px 0 60px;
+    }
+
+    .contact-form-container {
+        padding: 20px;
+    }
+
+    .contact-item {
+        gap: 14px;
+    }
+
+}
