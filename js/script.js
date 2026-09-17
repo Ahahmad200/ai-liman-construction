@@ -32,3 +32,44 @@ document.addEventListener("click", function(event) {
     }
 
 });
+/* ==========================================
+   PROPERTY IMAGE LIGHTBOX
+========================================== */
+
+function openPropertyLightbox(imageSrc) {
+
+    const lightbox = document.getElementById("propertyLightbox");
+
+    const lightboxImage =
+        document.getElementById("propertyLightboxImage");
+
+    lightboxImage.src = imageSrc;
+
+    lightbox.classList.add("show");
+}
+
+
+function closePropertyLightbox() {
+
+    const lightbox =
+        document.getElementById("propertyLightbox");
+
+    lightbox.classList.remove("show");
+}
+
+
+/* Close property image viewer
+   when the dark background is tapped */
+
+document.addEventListener("click", function(event) {
+
+    const lightbox =
+        document.getElementById("propertyLightbox");
+
+    if (event.target === lightbox) {
+
+        closePropertyLightbox();
+
+    }
+
+});
