@@ -73,3 +73,26 @@ document.addEventListener("click", function(event) {
     }
 
 });
+function openTeamImage(imageSrc) {
+    const viewer = document.getElementById("teamImageViewer");
+    const viewerImage = document.getElementById("teamViewerImage");
+
+    viewerImage.src = imageSrc;
+    viewer.classList.add("show");
+}
+
+function closeTeamImage() {
+    const viewer = document.getElementById("teamImageViewer");
+
+    viewer.classList.remove("show");
+}
+
+document.addEventListener("click", function(event) {
+
+    const viewer = document.getElementById("teamImageViewer");
+
+    if (event.target === viewer) {
+        closeTeamImage();
+    }
+
+});
