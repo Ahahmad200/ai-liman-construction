@@ -96,6 +96,7 @@ document.addEventListener("click", function(event) {
     }
 
 });
+
 /* ==========================================
    TEAM BIOGRAPHY POPUP
    ========================================== */
