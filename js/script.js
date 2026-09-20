@@ -96,3 +96,89 @@ document.addEventListener("click", function(event) {
     }
 
 });
+/* ==========================================
+   TEAM BIOGRAPHY POPUP
+   ========================================== */
+
+function openBiography(officialId) {
+
+    const popup = document.getElementById("biographyPopup");
+    const name = document.getElementById("biographyName");
+    const position = document.getElementById("biographyPosition");
+    const text = document.getElementById("biographyText");
+    const image = document.getElementById("biographyImage");
+
+
+    if (officialId === "official1") {
+
+        name.textContent = "Official Name";
+        position.textContent = "Position";
+
+        text.textContent =
+            "Biography information will appear here.";
+
+        image.src = "images/hero.jpg";
+    }
+
+
+    if (officialId === "official2") {
+
+        name.textContent = "Official Name";
+        position.textContent = "Position";
+
+        text.textContent =
+            "Biography information will appear here.";
+
+        image.src = "images/hero.jpg";
+    }
+
+
+    if (officialId === "official3") {
+
+        name.textContent = "Official Name";
+        position.textContent = "Position";
+
+        text.textContent =
+            "Biography information will appear here.";
+
+        image.src = "images/hero.jpg";
+    }
+
+
+    if (officialId === "official4") {
+
+        name.textContent = "Official Name";
+        position.textContent = "Position";
+
+        text.textContent =
+            "Biography information will appear here.";
+
+        image.src = "images/hero.jpg";
+    }
+
+
+    popup.classList.add("show");
+}
+
+
+function closeBiography() {
+
+    const popup = document.getElementById("biographyPopup");
+
+    popup.classList.remove("show");
+}
+
+
+/* Close biography popup when clicking outside the box */
+
+document.addEventListener("click", function(event) {
+
+    const popup = document.getElementById("biographyPopup");
+
+    if (event.target === popup) {
+
+        closeBiography();
+
+    }
+
+});
