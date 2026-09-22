@@ -2070,3 +2070,128 @@ section p {
     }
 
 }
+/* ==========================================
+   WHY CHOOSE US
+========================================== */
+
+.why-us-section {
+    padding: 70px 20px;
+    background: #ffffff;
+}
+
+.why-us-introduction {
+    max-width: 850px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.why-us-introduction h2 {
+    font-size: 36px;
+    color: #111827;
+    margin-bottom: 18px;
+}
+
+.why-us-introduction p:not(.section-label) {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #666;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.why-us-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.why-us-card {
+    background: #f8fafc;
+
+    padding: 30px 25px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.why-us-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.why-us-icon {
+    font-size: 42px;
+
+    margin-bottom: 18px;
+}
+
+.why-us-card h3 {
+    color: #111827;
+
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+.why-us-card p {
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   WHY CHOOSE US - RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+    .why-us-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .why-us-section {
+        padding: 55px 15px;
+    }
+
+    .why-us-introduction h2 {
+        font-size: 30px;
+    }
+
+    .why-us-introduction p:not(.section-label) {
+        font-size: 15px;
+    }
+
+    .why-us-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .why-us-card {
+        padding: 25px 20px;
+    }
+
+}
