@@ -435,12 +435,17 @@ section p {
     }
 
     .main-navigation {
-        gap: 10px;
-    }
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 12px;
+}
 
-    .main-navigation a {
-        font-size: 13px;
-    }
+.main-navigation a {
+    font-size: 13px;
+    padding: 4px 2px;
+}
 
     .hero {
         min-height: 550px;
