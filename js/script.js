@@ -182,3 +182,39 @@ document.addEventListener("click", function(event) {
     }
 
 });
+/* ==========================================
+   ADVERTISEMENT IMAGE VIEWER
+========================================== */
+
+function openAdvertisementImage(imageSrc) {
+
+    const viewer = document.getElementById("advertisementImageViewer");
+    const viewerImage = document.getElementById("advertisementViewerImage");
+
+    viewerImage.src = imageSrc;
+
+    viewer.classList.add("show");
+}
+
+
+function closeAdvertisementImage() {
+
+    const viewer = document.getElementById("advertisementImageViewer");
+
+    viewer.classList.remove("show");
+}
+
+
+/* Close when clicking outside the image */
+
+document.addEventListener("click", function(event) {
+
+    const viewer = document.getElementById("advertisementImageViewer");
+
+    if (event.target === viewer) {
+
+        closeAdvertisementImage();
+
+    }
+
+});
