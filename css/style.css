@@ -2341,3 +2341,48 @@ section p {
     }
 
    }
+/* ==========================================
+   ADVERTISEMENT IMAGE VIEWER
+========================================== */
+
+.advertisement-image-viewer {
+    display: none;
+    position: fixed;
+    z-index: 40000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.94);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.advertisement-image-viewer.show {
+    display: flex;
+}
+
+.advertisement-image-viewer img {
+    max-width: 95%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.advertisement-viewer-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 40001;
+}
+
+.advertisement-viewer-close:hover {
+    color: #d89b00;
+}
