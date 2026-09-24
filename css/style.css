@@ -2545,3 +2545,68 @@ section p {
 .advertisement-image img {
     max-width: 100%;
 }
+/* ==========================================
+   FINAL DESKTOP TEAM & ADVERTISEMENT FIX
+========================================== */
+
+.team-grid,
+.advertisement-grid {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    box-sizing: border-box;
+}
+
+.advertisement-grid {
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+}
+
+.team-card,
+.advertisement-card {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.team-image {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 260px;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.advertisement-image {
+    width: 100%;
+    max-width: 100%;
+    height: 230px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.advertisement-image img {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+
+/* Prevent the homepage from becoming wider than the screen */
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
