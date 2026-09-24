@@ -2507,3 +2507,41 @@ section p {
     }
 
 }
+/* ==========================================
+   DESKTOP IMAGE SIZE FIX
+========================================== */
+
+.team-section,
+.advertisement-section {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.team-grid,
+.advertisement-grid {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.team-card,
+.advertisement-card {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.team-image,
+.advertisement-image {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.team-image img,
+.advertisement-image img {
+    max-width: 100%;
+}
