@@ -2386,3 +2386,124 @@ section p {
 .advertisement-viewer-close:hover {
     color: #d89b00;
 }
+   /* ==========================================
+   COMPANY STATISTICS
+========================================== */
+
+.statistics-section {
+    padding: 70px 20px;
+    background: #0b2a4a;
+    color: #ffffff;
+}
+
+.statistics-introduction {
+    max-width: 850px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.statistics-introduction h2 {
+    font-size: 36px;
+    margin-bottom: 18px;
+    color: #ffffff;
+}
+
+.statistics-introduction p:not(.section-label) {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #dbe5ef;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.statistics-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.statistics-card {
+    padding: 30px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.statistics-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.13);
+}
+
+.statistics-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.statistics-number {
+    font-size: 38px;
+    font-weight: bold;
+    color: #d89b00;
+    margin-bottom: 8px;
+}
+
+.statistics-title {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   STATISTICS MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+    .statistics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .statistics-section {
+        padding: 55px 15px;
+    }
+
+    .statistics-introduction h2 {
+        font-size: 30px;
+    }
+
+    .statistics-introduction p:not(.section-label) {
+        font-size: 15px;
+    }
+
+    .statistics-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .statistics-card {
+        padding: 25px 12px;
+    }
+
+    .statistics-icon {
+        font-size: 34px;
+    }
+
+    .statistics-number {
+        font-size: 30px;
+    }
+
+    .statistics-title {
+        font-size: 14px;
+    }
+
+}
