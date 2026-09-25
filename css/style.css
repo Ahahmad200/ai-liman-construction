@@ -1053,6 +1053,8 @@ section p {
     }
 
 }
+
+
 /* ==========================================
    PROPERTIES PAGE
 ========================================== */
@@ -2504,72 +2506,6 @@ section p {
 
     .statistics-title {
         font-size: 14px;
-    }
-
-}
-/* ==========================================
-   DESKTOP ONLY - TEAM & ADVERTISEMENT
-   ========================================== */
-
-@media (min-width: 901px) {
-
-    .team-grid {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 25px;
-    }
-
-    .team-card {
-        width: 100%;
-        min-width: 0;
-        max-width: 100%;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
-
-    .team-image {
-        display: block;
-        width: 100%;
-        max-width: 100%;
-        height: 260px;
-        object-fit: cover;
-        box-sizing: border-box;
-    }
-
-
-    .advertisement-grid {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 25px;
-    }
-
-    .advertisement-card {
-        width: 100%;
-        min-width: 0;
-        max-width: 100%;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
-
-    .advertisement-image {
-        width: 100%;
-        max-width: 100%;
-        height: 230px;
-        overflow: hidden;
-        box-sizing: border-box;
-    }
-
-    .advertisement-image img {
-        display: block;
-        width: 100%;
-        max-width: 100%;
-        height: 100%;
-        object-fit: cover;
-        box-sizing: border-box;
     }
 
 }
