@@ -2441,3 +2441,38 @@ section p {
     }
 
 }
+/* PROPERTY VIEW DETAILS BUTTON */
+
+.property-content .property-details-btn {
+    display: flex;
+    width: 100%;
+    min-height: 45px;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 12px;
+    padding: 12px 20px;
+
+    background: #0b2a4a;
+    color: #ffffff;
+
+    border: 2px solid #d89b00;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.property-content .property-details-btn:hover {
+    background: #d89b00;
+    color: #0b2a4a;
+    transform: translateY(-2px);
+}
+
+.property-content .property-details-btn:active {
+    transform: scale(0.98);
+}
