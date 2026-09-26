@@ -2476,3 +2476,180 @@ section p {
 .property-content .property-details-btn:active {
     transform: scale(0.98);
 }
+/* ==========================================
+   PROFESSIONAL PROPERTY DETAILS POPUP
+========================================== */
+
+.property-details-modal {
+    background: rgba(5, 15, 30, 0.88);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+}
+
+.property-details-box {
+    width: 100%;
+    max-width: 750px;
+    border-radius: 16px;
+    background: #ffffff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    animation: propertyPopupOpen 0.35s ease;
+}
+
+@keyframes propertyPopupOpen {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* PROPERTY IMAGE */
+
+.property-details-box > img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+/* PROPERTY INFORMATION */
+
+.property-details-content {
+    padding: 30px;
+}
+
+.property-details-content h2 {
+    color: #0b2a4a;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.property-details-content p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 12px 0;
+}
+
+/* PROPERTY STATUS */
+
+#propertyDetailsStatus {
+    display: inline-block;
+    background: #0b2a4a;
+    color: #ffffff;
+    padding: 7px 16px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* PROPERTY PRICE */
+
+.property-details-content h3 {
+    display: block;
+    color: #b77900;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 12px;
+    background: #fff8e5;
+    border-left: 4px solid #d89b00;
+    border-radius: 5px;
+}
+
+/* WHATSAPP BUTTON */
+
+#propertyWhatsAppButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    background: #128c4a;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+#propertyWhatsAppButton:hover {
+    background: #075e35;
+    transform: translateY(-2px);
+}
+
+/* CLOSE BUTTON */
+
+.property-details-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.65);
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+    text-shadow: none;
+    transition: 0.3s ease;
+}
+
+.property-details-close:hover {
+    background: #d89b00;
+    color: #0b2a4a;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+
+    .property-details-modal {
+        padding: 12px;
+    }
+
+    .property-details-box {
+        max-width: 100%;
+        max-height: 92vh;
+        border-radius: 12px;
+    }
+
+    .property-details-box > img {
+        height: 230px;
+    }
+
+    .property-details-content {
+        padding: 20px;
+    }
+
+    .property-details-content h2 {
+        font-size: 24px;
+    }
+
+    .property-details-content h3 {
+        font-size: 19px;
+    }
+
+    .property-details-content p {
+        font-size: 14px;
+    }
+
+    #propertyWhatsAppButton {
+        font-size: 14px;
+        padding: 13px;
+    }
+}
