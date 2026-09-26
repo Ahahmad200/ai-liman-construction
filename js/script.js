@@ -287,3 +287,50 @@ document.addEventListener("click", function(event) {
     }
 
 });
+// ==========================================
+// PROPERTY PHOTO GALLERY
+// ==========================================
+
+function loadPropertyGallery(images) {
+
+    const mainImage = document.getElementById("propertyDetailsImage");
+    const thumbnails = document.getElementById("propertyThumbnails");
+
+    // Clear previous thumbnails
+    thumbnails.innerHTML = "";
+
+    // Display the first image
+    mainImage.src = images[0];
+
+    // Create a thumbnail for each image
+    images.forEach(function(image, index) {
+
+        const thumbnail = document.createElement("img");
+
+        thumbnail.src = image;
+        thumbnail.alt = "Property photo " + (index + 1);
+        thumbnail.className = "property-thumbnail";
+
+        // Highlight the first thumbnail
+        if (index === 0) {
+            thumbnail.classList.add("active");
+        }
+
+        // Change the main image when tapped
+        thumbnail.onclick = function() {
+
+            mainImage.src = image;
+
+            document.querySelectorAll(".property-thumbnail")
+                .forEach(function(item) {
+                    item.classList.remove("active");
+                });
+
+            thumbnail.classList.add("active");
+        };
+
+        thumbnails.appendChild(thumbnail);
+
+    });
+
+}
