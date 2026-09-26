@@ -2372,3 +2372,72 @@ section p {
         font-size: 35px;
     }
 }
+/* ==========================================
+   PROPERTY DETAILS BUTTON
+========================================== */
+
+.property-details-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: 15px;
+    padding: 12px 24px;
+
+    background: #0b2a4a;
+    color: #ffffff;
+
+    border: 2px solid #d89b00;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.property-details-btn:hover {
+    background: #d89b00;
+    color: #0b2a4a;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.2);
+}
+
+.property-details-btn:active {
+    transform: translateY(0);
+}
+
+/* ==========================================
+   PROPERTY ACTION BUTTON LAYOUT
+========================================== */
+
+.property-content .property-details-btn {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.property-content .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+/* ==========================================
+   MOBILE BUTTON
+========================================== */
+
+@media (max-width: 600px) {
+
+    .property-details-btn {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 15px;
+    }
+
+}
