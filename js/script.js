@@ -222,7 +222,7 @@ document.addEventListener("click", function(event) {
 // PROPERTY DETAILS POPUP
 // ==========================================
 
-function openPropertyDetails(
+loadPropertyGallery([image]);
     title,
     status,
     location,
