@@ -222,7 +222,7 @@ document.addEventListener("click", function(event) {
 // PROPERTY DETAILS POPUP
 // ==========================================
 
-loadPropertyGallery([image]);
+function openPropertyDetails(
     title,
     status,
     location,
@@ -247,7 +247,7 @@ loadPropertyGallery([image]);
     priceElement.textContent = "💰 " + price;
     descriptionElement.textContent = description;
 
-    imageElement.src = image;
+    loadPropertyGallery([image]);
 
     // WhatsApp message
     const message =
