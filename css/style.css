@@ -2653,3 +2653,72 @@ section p {
         padding: 13px;
     }
 }
+/* ==========================================
+   PROPERTY PHOTO GALLERY
+========================================== */
+
+.property-gallery {
+    width: 100%;
+    padding: 15px 20px;
+    background: #ffffff;
+}
+
+.property-thumbnails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.property-thumbnail {
+    width: 85px;
+    height: 65px;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.property-thumbnail:hover {
+    transform: scale(1.08);
+    border-color: #d89b00;
+}
+
+.property-thumbnail.active {
+    border: 3px solid #d89b00;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* MAIN PROPERTY IMAGE */
+
+#propertyDetailsImage {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+/* MOBILE GALLERY */
+
+@media (max-width: 600px) {
+
+    .property-gallery {
+        padding: 12px;
+    }
+
+    .property-thumbnails {
+        gap: 8px;
+    }
+
+    .property-thumbnail {
+        width: 65px;
+        height: 55px;
+    }
+
+    #propertyDetailsImage {
+        height: 230px;
+    }
+}
