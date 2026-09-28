@@ -247,7 +247,7 @@ function openPropertyDetails(
     priceElement.textContent = "💰 " + price;
     descriptionElement.textContent = description;
 
-    loadPropertyGallery([image]);
+    loadPropertyGallery(Array.isArray(image) ? image : [image]);
 
     // WhatsApp message
     const message =
