@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | A.I Liman</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            background: #111827;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .login-box {
+            background: white;
+            padding: 30px;
+            width: 90%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .login-box h1 {
+            text-align: center;
+            color: #111827;
+        }
+
+        .login-box p {
+            text-align: center;
+            color: #555;
+        }
+
+        .login-box label {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 25px;
+            background: #d97706;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-box button:hover {
+            background: #b45309;
+        }
+
+        #loginMessage {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+        <h1>A.I Liman</h1>
+        <p>Property Management Admin Login</p>
+
+        <form id="loginForm">
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                required
+                autocomplete="username"
+            >
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                required
+                autocomplete="current-password"
+            >
+
+            <button type="submit">Login</button>
+            <p id="loginMessage"></p>
+        </form>
+    </div>
+
+    <script type="module" src="js/admin-login.js"></script>
+</body>
+</html>
