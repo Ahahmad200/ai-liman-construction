@@ -54,43 +54,54 @@ async function loadProperties() {
 
     propertyList.innerHTML = "Loading properties...";
 
-    const { data, error } = await supabase
-        .from("properties")
-        .select("*")
-        .order("created_at", { ascending: false });
+    try {
+        const { data, error } = await supabase
+            .from("properties")
+            .select("*")
+            .order("created_at", { ascending: false });
 
-    if (error) {
-        propertyList.innerHTML = "Error loading properties: " + error.message;
-        return;
+        if (error) {
+            console.error("Supabase error:", error);
+            propertyList.textContent =
+                "Error: " + error.message;
+            return;
+        }
+
+        if (!data || data.length === 0) {
+            propertyList.textContent =
+                "No properties have been added yet.";
+            return;
+        }
+
+        propertyList.innerHTML = "";
+
+        data.forEach(function (property) {
+            const item = document.createElement("div");
+
+            const title = document.createElement("h3");
+            title.textContent = property.title;
+
+            const type = document.createElement("p");
+            type.textContent = "Type: " + property.property_type;
+
+            const status = document.createElement("p");
+            status.textContent = "Status: " + property.status;
+
+            const location = document.createElement("p");
+            location.textContent =
+                "Location: " + (property.location || "Not specified");
+
+            const price = document.createElement("p");
+            price.textContent =
+                "Price: " + (property.price ?? "Not specified");
+
+            item.append(title, type, status, location, price);
+            propertyList.appendChild(item);
+        });
+
+    } catch (error) {
+        console.error("Loading failed:", error);
+        propertyList.textContent =
+            "Loading failed: " + error.message;
     }
-
-    if (data.length === 0) {
-        propertyList.innerHTML = "No properties have been added yet.";
-        return;
-    }
-
-    propertyList.innerHTML = "";
-
-    data.forEach(function (property) {
-        const item = document.createElement("div");
-
-        item.innerHTML = `
-            <h3>${property.title}</h3>
-            <p>Type: ${property.property_type}</p>
-            <p>Status: ${property.status}</p>
-            <p>Location: ${property.location || "Not specified"}</p>
-            <p>Price: ${property.price || "Not specified"}</p>
-            <p>${property.description || ""}</p>
-            <hr>
-        `;
-
-        propertyList.appendChild(item);
-    });
 }
-
-// Load properties after the administrator is verified
-checkAdmin().then(function (isAdmin) {
-    if (isAdmin) {
-        loadProperties();
-    }
-});
