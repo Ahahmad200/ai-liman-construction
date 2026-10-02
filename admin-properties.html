@@ -1,1 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Admin | A.I Liman</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .admin-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
 
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .admin-form {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,.1);
+            margin-bottom: 30px;
+        }
+
+        .admin-form input,
+        .admin-form textarea,
+        .admin-form select {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .admin-form label {
+            font-weight: bold;
+        }
+
+        .admin-button {
+            background: #d97706;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .admin-property {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,.1);
+        }
+
+        .admin-property img {
+            width: 120px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        #adminMessage {
+            margin: 15px 0;
+            font-weight: bold;
+        }
+
+        body {
+            background: #f3f4f6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="admin-container">
+        <div class="admin-header">
+            <h1>Property Management</h1>
+            <button class="admin-button" id="logoutButton">
+                Logout
+            </button>
+        </div>
+
+        <h2>Add New Property</h2>
+
+        <form id="propertyForm" class="admin-form">
+            <label for="title">Property Name</label>
+            <input type="text" id="title" required>
+
+            <label for="propertyType">Property Type</label>
+            <select id="propertyType" required>
+                <option value="">Select property type</option>
+                <option value="Residential House">Residential House</option>
+                <option value="Commercial Property">Commercial Property</option>
+                <option value="Plot of Land">Plot of Land</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="status">Status</label>
+            <select id="status" required>
+                <option value="">Select status</option>
+                <option value="FOR SALE">For Sale</option>
+                <option value="FOR RENT">For Rent</option>
+            </select>
+
+            <label for="location">Location</label>
+            <input type="text" id="location">
+
+            <label for="price">Price (₦)</label>
+            <input type="number" id="price" min="0" step="0.01">
+
+            <label for="description">Description</label>
+            <textarea id="description" rows="5"></textarea>
+
+            <label for="propertyImages">Property Photos</label>
+            <input type="file" id="propertyImages"
+                   accept="image/*" multiple>
+
+            <button type="submit" class="admin-button">
+                Save Property
+            </button>
+
+            <p id="adminMessage"></p>
+        </form>
+
+        <h2>Existing Properties</h2>
+        <div id="propertyList">
+            Loading properties...
+        </div>
+    </div>
+
+    <script type="module" src="js/property-admin.js"></script>
+</body>
+</html>
