@@ -2,7 +2,7 @@ import { createClient } from
     "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
 
 const SUPABASE_URL = "https://ospcafhxywbwhjgvnoxq.supabase.co";
-const SUPABASE_ANON_KEY = "sb_publishable_7wjYcysMxhqjMOQu_gptKw_VqEXJY_U ";
+const SUPABASE_ANON_KEY = "sb_publishable_7wjYcysMxhqjMOQu_gptKw_VqEXJY_U";
 
 const supabase = createClient(
     SUPABASE_URL,
@@ -42,12 +42,6 @@ document.getElementById("logoutButton")
         window.location.href = "admin-login.html";
     });
 
-// Check access when the page loads
-checkAdmin().then(function (isAdmin) {
-    if (isAdmin) {
-        console.log("Administrator verified successfully.");
-    }
-});
 // Load all properties from Supabase
 async function loadProperties() {
     const propertyList = document.getElementById("propertyList");
@@ -105,3 +99,9 @@ async function loadProperties() {
             "Loading failed: " + error.message;
     }
 }
+checkAdmin().then(function (isAdmin) {
+    if (isAdmin) {
+        console.log("Administrator verified.");
+        loadProperties();
+    }
+});
