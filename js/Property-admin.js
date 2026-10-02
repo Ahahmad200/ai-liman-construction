@@ -48,3 +48,49 @@ checkAdmin().then(function (isAdmin) {
         console.log("Administrator verified successfully.");
     }
 });
+// Load all properties from Supabase
+async function loadProperties() {
+    const propertyList = document.getElementById("propertyList");
+
+    propertyList.innerHTML = "Loading properties...";
+
+    const { data, error } = await supabase
+        .from("properties")
+        .select("*")
+        .order("created_at", { ascending: false });
+
+    if (error) {
+        propertyList.innerHTML = "Error loading properties: " + error.message;
+        return;
+    }
+
+    if (data.length === 0) {
+        propertyList.innerHTML = "No properties have been added yet.";
+        return;
+    }
+
+    propertyList.innerHTML = "";
+
+    data.forEach(function (property) {
+        const item = document.createElement("div");
+
+        item.innerHTML = `
+            <h3>${property.title}</h3>
+            <p>Type: ${property.property_type}</p>
+            <p>Status: ${property.status}</p>
+            <p>Location: ${property.location || "Not specified"}</p>
+            <p>Price: ${property.price || "Not specified"}</p>
+            <p>${property.description || ""}</p>
+            <hr>
+        `;
+
+        propertyList.appendChild(item);
+    });
+}
+
+// Load properties after the administrator is verified
+checkAdmin().then(function (isAdmin) {
+    if (isAdmin) {
+        loadProperties();
+    }
+});
