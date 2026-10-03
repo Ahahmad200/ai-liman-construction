@@ -99,4 +99,9 @@ async function loadProperties() {
             "Loading failed: " + error.message;
     }
 }
-console.log("PROPERTY ADMIN JS IS RUNNING");
+// Check administrator and then load properties
+checkAdmin().then(function (isAdmin) {
+    if (isAdmin) {
+        loadProperties();
+    }
+});
