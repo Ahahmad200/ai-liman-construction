@@ -204,3 +204,78 @@ async function startDashboard() {
 }
 
 startDashboard();
+// ================================
+// SAVE NEW PROPERTY
+// ================================
+
+const propertyForm =
+    document.getElementById("propertyForm");
+
+propertyForm.addEventListener(
+    "submit",
+    async function (event) {
+
+        event.preventDefault();
+
+        const adminMessage =
+            document.getElementById("adminMessage");
+
+        adminMessage.textContent =
+            "Saving property...";
+
+        const title =
+            document.getElementById("title").value.trim();
+
+        const propertyType =
+            document.getElementById("propertyType").value;
+
+        const status =
+            document.getElementById("status").value;
+
+        const location =
+            document.getElementById("location").value.trim();
+
+        const price =
+            document.getElementById("price").value;
+
+        const description =
+            document.getElementById("description").value.trim();
+
+        const { data, error } =
+            await supabase
+                .from("properties")
+                .insert([
+                    {
+                        title: title,
+                        property_type: propertyType,
+                        status: status,
+                        location: location,
+                        price: price || null,
+                        description: description,
+                        images: []
+                    }
+                ])
+                .select()
+                .single();
+
+        if (error) {
+
+            console.error("Save property error:", error);
+
+            adminMessage.textContent =
+                "Error saving property: " +
+                error.message;
+
+            return;
+        }
+
+        console.log("Property saved:", data);
+
+        adminMessage.textContent =
+            "Property saved successfully!";
+
+        propertyForm.reset();
+
+        await loadProperties();
+    }
+);
