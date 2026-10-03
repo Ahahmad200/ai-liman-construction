@@ -99,9 +99,3 @@ async function loadProperties() {
             "Loading failed: " + error.message;
     }
 }
-checkAdmin().then(function (isAdmin) {
-    if (isAdmin) {
-        console.log("Administrator verified.");
-        loadProperties();
-    }
-});
