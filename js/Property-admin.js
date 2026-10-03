@@ -99,3 +99,4 @@ async function loadProperties() {
             "Loading failed: " + error.message;
     }
 }
+console.log("PROPERTY ADMIN JS IS RUNNING");
